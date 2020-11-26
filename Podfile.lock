@@ -1,27 +1,28 @@
 PODS:
-  - Alamofire (5.3.0)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
+  - Alamofire (5.4.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - RxBlocking (6.0.0-rc.2):
-    - RxSwift (= 6.0.0-rc.2)
-  - RxCocoa (6.0.0-rc.2):
-    - RxRelay (= 6.0.0-rc.2)
-    - RxSwift (= 6.0.0-rc.2)
-  - RxRelay (6.0.0-rc.2):
-    - RxSwift (= 6.0.0-rc.2)
-  - RxSwift (6.0.0-rc.2)
-  - RxTest (6.0.0-rc.2):
-    - RxSwift (= 6.0.0-rc.2)
-  - SwiftLint (0.40.3)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
+  - SwiftLint (0.41.0)
 
 DEPENDENCIES:
-  - Moya (~> 14.0)
-  - RxBlocking (= 6.0.0-rc.2)
-  - RxCocoa (= 6.0.0-rc.2)
-  - RxSwift (= 6.0.0-rc.2)
-  - RxTest (= 6.0.0-rc.2)
+  - Moya/RxSwift
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTest
   - SwiftLint
 
 SPEC REPOS:
@@ -36,15 +37,15 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: 2c792affbdc2f18016e08fdbcacd60aebe1ba593
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  RxBlocking: 548aa3ba93a330d49c2b2e78d1b0d4d322adba49
-  RxCocoa: 38445a25751be5907f52f7ea02c137f52ce2e7f2
-  RxRelay: b9e2483e83f46e4e7bf1234c6fe418e5c2eaf825
-  RxSwift: ada35be6643bedf6881cdbd6bbfb27aeea527670
-  RxTest: 979a97b4c55e9fcb5e6b32fb86cb432a819883b4
-  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: 1fac2a365f9ab8af2621bdf565b40136fe19c925
+PODFILE CHECKSUM: c3b57f1fc8636881632aa75e5c16975c80b89067
 
 COCOAPODS: 1.9.3

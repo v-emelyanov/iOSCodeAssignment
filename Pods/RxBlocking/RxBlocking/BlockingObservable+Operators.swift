@@ -64,7 +64,7 @@ extension BlockingObservable {
     ///
     /// - returns: Returns the only element of an sequence, and reports an error if there is not exactly one element in the observable sequence.
     public func single() throws -> Element {
-        try self.single { _ in true }
+        return try self.single { _ in true }
     }
 
     /// Blocks current thread until sequence terminates.
@@ -96,7 +96,7 @@ extension BlockingObservable {
     ///
     /// - returns: On completion, returns the list of elements in the sequence. On error, returns the list of elements up to that point, along with the error itself.
     public func materialize() -> MaterializedSequenceResult<Element> {
-        self.materializeResult()
+        return self.materializeResult()
     }
 }
 
