@@ -39,8 +39,8 @@ final class HomeScreenVM {
 	init() {
 		postDriver = toStartLoadingPostInnerSubject
 			.asObservable()
-			.withLatestFrom(idPostFromField)
-			.flatMap { lastIdPost in
+			.withLatestFrom(idPostFromField) {$1}
+			.flatMap { (lastIdPost: String?) in
 				self.provider.rx.request(.getWithDetails(id: Int(lastIdPost ?? "") ?? 0))
 					.filterSuccessfulStatusCodes()
 					.map(PostDetailsModel.self)
