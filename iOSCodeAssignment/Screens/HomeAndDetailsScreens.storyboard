@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLa-h3-tLZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hl9-5e-nJ8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home ScreenVC-->
+        <!--Home Screen-->
         <scene sceneID="Sgh-Ed-HhP">
             <objects>
                 <viewController id="QLa-h3-tLZ" customClass="HomeScreenVC" customModule="iOSCodeAssignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter numer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dr6-lK-YBC">
-                                <rect key="frame" x="147" y="130" width="120" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter numer from 1 to 100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dr6-lK-YBC">
+                                <rect key="frame" x="109.5" y="174" width="195.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="u0h-gE-6oz"/>
                                 </constraints>
@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-Nc-SZu">
-                                <rect key="frame" x="189" y="194" width="36" height="30"/>
+                                <rect key="frame" x="189" y="238" width="36" height="30"/>
                                 <state key="normal" title="Send"/>
                             </button>
                         </subviews>
@@ -39,6 +39,7 @@
                             <constraint firstItem="Dr6-lK-YBC" firstAttribute="centerX" secondItem="fKz-Nc-SZu" secondAttribute="centerX" id="piE-pC-Dqc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home Screen" id="8Ph-fW-EAh"/>
                     <connections>
                         <outlet property="buttonSend" destination="fKz-Nc-SZu" id="pgS-6e-l72"/>
                         <outlet property="textFieldNumer" destination="Dr6-lK-YBC" id="YQi-ok-73d"/>
@@ -46,10 +47,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5j-XX-qAs" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="150"/>
+            <point key="canvasLocation" x="968" y="150"/>
+        </scene>
+        <!--Details ScreenVC-->
+        <scene sceneID="E87-Rm-QEN">
+            <objects>
+                <viewController storyboardIdentifier="DetailsScreenVC" id="2P0-Ks-tNx" customClass="DetailsScreenVC" customModule="iOSCodeAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6r-4L-uae">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GVI-IL-KjA">
+                                <rect key="frame" x="20" y="112" width="374" height="750"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WvI-ir-fNU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GVI-IL-KjA" firstAttribute="trailing" secondItem="A6r-4L-uae" secondAttribute="trailingMargin" id="6ca-sv-f53"/>
+                            <constraint firstItem="GVI-IL-KjA" firstAttribute="top" secondItem="WvI-ir-fNU" secondAttribute="top" constant="68" id="aRX-Wo-GqP"/>
+                            <constraint firstItem="GVI-IL-KjA" firstAttribute="bottom" secondItem="WvI-ir-fNU" secondAttribute="bottom" id="eUe-v3-HDe"/>
+                            <constraint firstItem="GVI-IL-KjA" firstAttribute="leading" secondItem="A6r-4L-uae" secondAttribute="leadingMargin" id="xB7-VI-Ouz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VNB-gl-y0t"/>
+                    <connections>
+                        <outlet property="textView" destination="GVI-IL-KjA" id="z4Z-z1-QyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdj-FG-XWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028.985507246377" y="150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RH6-dU-OfQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hl9-5e-nJ8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HSd-dL-hru">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QLa-h3-tLZ" kind="relationship" relationship="rootViewController" id="Iwb-O1-0fd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIE-8K-Uax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="150"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
